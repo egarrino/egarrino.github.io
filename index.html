@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Prototype techniques</title>
-	<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+	<title>U.S. Food Import over last 20 years</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 	<script src="https://d3js.org/d3.v5.min.js"></script>
 	<script src="https://unpkg.com/intersection-observer"></script>
 	<script src="https://unpkg.com/scrollama"></script>
@@ -13,51 +14,60 @@
 		top:0;
 		left:0;
 		margin:0;
-		font-family:'Helvetica Neue', sans-serif;
+		font-family: 'Quicksand', sans-serif;
+		background-color:dimgray;
 	}
 	nav	{
-		background-color:white;
+		background-color:dimgray;
 		position:fixed;
 		width:100%;
 		display:flex;
-		justify-content: center;
+		justify-content:center;
 		align-items:center;
-		border-bottom:0.05em solid black;
-		z-index:100;
+		border-bottom:0.05em dimgray;
+		z-index:1000;
+		color:whitesmoke;
 	}
 	.title {
-		height:50vh;
-		color:white;
-		background-color:black;
-	/*	background-image:url('https://media.giphy.com/media/Ry5TvDmJfGDL2/giphy.gif');*/
+		height:35vh;
+		font-size:1.5em;
+		color:whitesmoke;
+		background-color:dimgray;
+    background-image:url('https://d194ip2226q57d.cloudfront.net/images/BestDishes_Kai_MangoJalepenoTuna.original.png');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: center;
-		background-size: auto 100%;
+		background-size: auto 160%;
 	}
 	.title h1 {
 		font-size:5em;
+		color:whitesmoke;
 	}
 	.title h2 {
-		font-size:1em;
-		font-weight:400;
+		font-size:1.5em;
+		font-weight:500;
+		color:whitesmoke;
 	}
 	.header {
 		text-align:center;
 		display:flex;
 		justify-content:center;
 		align-items:center;
-		border:0.5em solid black;
+		border:0.1em dimgray;
 		padding:5% 0%;
-		animation: fadeIn 0.5s ease-in-out;
+		animation: fadeIn 0.1s ease-in-out;
+		color:whitesmoke;
 	}
 	.header h1{
-		font-family:'Helvetica Neue', sans-serif;
+		font-family: 'Quicksand', sans-serif;
 		font-weight:800;
 		margin:0;
+		color:whitesmoke;
 	}
 	.header h2 {
+		font-family: 'Quicksand', sans-serif;
 		margin:0;
+		color:whitesmoke;
 	}
 	.sticky {
 		float:right;
@@ -65,7 +75,7 @@
 		position:sticky;
 		width:50%;
 		display:inline-flex;
-					background-color:white;
+		background-color:white;
 	}
 	.leftside{
 		background-color:black;
@@ -99,7 +109,8 @@
 		line-height:2em;
 		opacity:0;
 		margin-top:10%;
-		transition:0.5s ease-in-out;
+		transition:0.2s ease-in-out;
+		color:whitesmoke;
 	}
 	.text h1 {
 		font-size:4em;
@@ -107,11 +118,11 @@
 		line-height:1em;
 		font-weight:900;
 		width:60%;
+		color:whitesmoke;
 	}
 	.text h2 {
-		font-weight:400;
-		font-size:1em;
-		font-style:italic;
+		font-weight:500;
+		font-size:1.4em;
 	}
 	.sticky h1 {
 		width:100%;
@@ -131,31 +142,31 @@
 		margin:5% 5%;
 	}
 	iframe {
-		border:0.5em solid #1170aa;
-		width:1200px;
-		height:700px;
+		border:0.3em solid gray;
+		width:1280px;
+		height:750px;
 	}
 	.tableauPlaceholder{
-		width:100%;
+		width:500%;
 		z-index:0;
 		margin:5% 5%;
-		border:0.5em solid #1170aa;
+		border:0.3em solid gray;
 	}
 	img{
 		text-align:center;
 		margin:0%;
 		display:inline-block;
-		border:0.5em solid #1170aa;
+		border:0.3em solid gray;
 	}
 	.caption {
 		font-size:0.8em;
-		color:#666666;
+		color:whitesmoke;
 	}
 	.small {
 		width:55%;
 	}
 	.large {
-		width:80%;
+		width:69%;
 		display:block;
 	}
 	@keyframes fadeIn {
@@ -193,17 +204,20 @@
 			width:80%;
 		}
 		.title {
-			height:80vh;
+			height:90vh;
+			color:whitesmoke;
 		}
 		.text h1 {
 			font-size:2.5em;
 			width:80%;
+			color:whitesmoke;
 		}
 		.text {
 			margin:10% 5%;
+			color:whitesmoke;
 		}
 		iframe {
-			height:400px;
+			height:2800px;
 		}
 
 	}
@@ -223,54 +237,78 @@
 	</div>
 </div>
 
-
 <div class='text'>
-	<h2>Intro</h2>	
-	U.S. imports a wide variety of food & beverages from other countries.  Spending increased steadly over time reaching $165B in 2021. Population growth (avg. +0.8%) and price inflation (avg. +4%) contributed but are not the main cause.  Americans interest in food and beverage is changing.
+	<h1>U.S. Food Import steadily increased over the last 20 years</h1>
+	<h2>U.S. imports a wide variety of food and beverages from other countries including Seafood, Fruits, Grains, Vegetables, and many more.
+	<p>Over the last two decades, the money that the U.S. spent on imported food and beverage almost triplicated (+284%): from $58 Billion in 2004 to $165 Billion in 2021.</p></h2>
+</div>
+
+<div class='center_aligner'>
+	<img class='small' src="images/Shopping Cart.jpg"> 	
+</div>
+
+<div class='center_aligner'>
+	<img class='small' src="images/Fish & Food Import Over Time_Total.jpg"> 	
 </div>
 
 <div class='text'>
-	<h1>U.S. food import steadily increased over the last 20 years</h1>
-	The amount of money that the U.S. spent on imported food and beverage almost triplicated (+284%) over the last two decades ($58 Billion in 2004 to $165 Billion in 2021).
-	<p>At the top of U.S. import shopping list are Fish & shellfish primarily from Canada and Chile, and Fruits primarily from Mexico, followed by Beverages (excl. liquors as considered agricultural products), Others Edible Products (i.e. Prepared Food and ingredients), Grains, Vegetables, and Meats.</p>
+	<h2>Population growth of approx. +0.8% as well as price inflation of approx. +4% - both in average over the last 20 years - contributed to the U.S. food & beverages import value increase. However, they were not the primary cause - Americans changing food interests is the primary cause.</h2>
 </div>
 
+<div class='center_aligner'>
+	<img class='small' src="images/Fish & Food Import Over Time_Inflation.jpg"> 	
+</div>
+
+<div class='text'>
+	<h2>Let's look into which food categories are mostly imported before looking at Americas food interests. 
+	<p>At the top of the U.S. food import shopping list there are Fish & Shellfish primarily from Canada and Chile, Fruits primarily from Mexico, followed by Others Edible Products (i.e. Prepared Food and ingredients), Beverages (excl. liquors as considered agricultural products), Grains, Vegetables, and Meats.</p></h2>
+</div>
+
+<div class='center_aligner'>
+	<img class='small' src="images/Fish & Food Import Over Time_Details.jpg"> 	
+</div>
+
+<div class='text'>
+	<h2>Interact with the following dashboard to learn more about the value imported over last 20 years for the various categories of food and beverages and see the related source countries.</h2>
+</div>
 
 <!-- tableau public -->
-<div class='tableauPlaceholder' id='viz1670212452189' style='position: relative'><noscript><a href='#'><img alt='US Food Import Interactive Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USFoodImportDashboard&#47;USFoodImportInteractiveDashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='USFoodImportDashboard&#47;USFoodImportInteractiveDashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USFoodImportDashboard&#47;USFoodImportInteractiveDashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1670212452189');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1280px';vizElement.style.height='947px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<div class='tableauPlaceholder' id='viz1670778552231' style='position: relative'><noscript><a href='#'><img alt='US Food Import Interactive Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USFoodImportDashboard_Shorter&#47;USFoodImportInteractiveDashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='USFoodImportDashboard_Shorter&#47;USFoodImportInteractiveDashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USFoodImportDashboard_Shorter&#47;USFoodImportInteractiveDashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1670778552231');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1280px';vizElement.style.height='947px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 </div>
 
 <div class='text'>
-	<h1>Seafood and Fruits are at the top of the shopping list</h1>
-	The United States imports approximately 70% of the seafood and 60% of the fruits consumed by the Americans.
-	<p>- Top seafood imports include shrimp, freshwater fish, salmon and tuna.</p>
-	<p>- Top imported fruits are bananas, berries, avocados and grapes.</p>
+	<h1>Seafood and Fruits are at the top of U.S. Food Import shopping list</h1>
+	<h2>Now that we know that Fish and Fruits are at the top of U.S. Import shopping list, it is relevant to know that the United States imports approximately 70% of the Seafood and 60% of the Fruits consumed by the Americans.
+	<p>Top seafood imports include shrimp, freshwater fish, salmon and tuna, and top imported fruits are bananas, berries, avocados and grapes.</p>
+  <p>Here below are a visual of the top imported Seafood and Fruits and some general stats on the top imported Fish category.</p></h2>
 </div>
 
-
-<!-- interactive embed, adjust the width and height as necessary, copy lines 155 to 157 to create a new interactive embed --> 
 <div class='center_aligner'>
-	<iframe src="index_interactive.html" frameBorder=0 scrolling=no></iframe>
+	<img class='large' src="images/Custom Data Graphic_US Food Import.jpg"> 	
 </div>
-<!-- caption for image 3 -->
+
 <div class='center_aligner'>
-	<div class='caption'>Top Imported Seafood and Fruits</div>	
+	<img class='large' src="images/Fish Stats.jpg"> 	
+</div>
+
+<div class='text'>
+	<h1>Are Americans changing their diets?</h1>
+	<h2>The U.S. Web Searches in the Food & Drink category (source Google Trends) over the 2004-2021 time period show a steadly increasing interest in Fish & Shellfish as well as Fruits. 
+	<p></p>
+  <p>"Fish market", "Fish recipe", "Fish tacos", "Fish near me", etc. are just some of the top Internet searches over last 10 years and clearly demonstrate that Americans love eating seafood, in particular the Coasts population that is known to be more diverse, wealthier and healthier.</p>
+  <p>Are Americans changing their diets as becoming more diverse, wealthier, and healthier? Let's look at their interest over time and by location (U.S. State) as well as the top search queries for each of the food categories.</p></h2>
+</div>
+
+<!-- tableau public -->
+<div class='tableauPlaceholder' id='viz1670786742739' style='position: relative'><noscript><a href='#'><img alt='US Food Import Interactive Dashboard (2) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USFoodImportDashboard_AmericansInterest&#47;USFoodImportInteractiveDashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='USFoodImportDashboard_AmericansInterest&#47;USFoodImportInteractiveDashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USFoodImportDashboard_AmericansInterest&#47;USFoodImportInteractiveDashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1670786742739');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1280px';vizElement.style.height='927px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 </div>
 
 <div class='text'>
 	<h1>Takeaways</h1>
-	It is clear that Americans love eating Fish, primarily on the Coasts, which are known to have a more diverse, wealthier and healthier population. So the U.S. has to import more and more Fish over time. 
-	<p>Similarly they love exotic fruits that need to be imported from other countries as well.</p> 
-</div>
-
-<!-- image 1 -->
-<div class='center_aligner'>
-	<!-- change line 120 if you want to change the size of the image -->
-	<img class='small' src="images/fish and fruits queries.jpg"> 	
-</div>
-<!-- caption for image 1 -->
-<div class='center_aligner'>
-	<div class='caption'>U.S. Internet Search Queries (2004 to 2021)</div>	
+	<h2>The U.S. doesn't have enough fish to cover Americans consumes, therefore needs to import more and more fish over time.</p>
+  <p>Similarly, Americans are looking for exotic fruits that are not produced or always available in our Country, so they need to be imported as well.</p>
+  <p></p>
+  <p>U.S. Food Imports will just increase over time considering the increase in population as well. Will the Earth have enough Fish and Fruits for all?</p></h2>
 </div>
 
 </body>
