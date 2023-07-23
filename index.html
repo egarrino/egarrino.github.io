@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 	<script src="https://d3js.org/d3.v5.min.js"></script>
 	<script src="https://unpkg.com/intersection-observer"></script>
-	<!--<script src="https://unpkg.com/scrollama"></script>-->
+	<script src="https://unpkg.com/scrollama"></script>
 </head>
 
 <style type="text/css">
@@ -172,7 +172,7 @@
 		width:69%;
 		display:block;
 	}
-	@keyframes fadeIn {
+	<!--@keyframes fadeIn {
 		0%{
 			opacity:0;
 		}
@@ -180,6 +180,7 @@
 			opacity:1;
 		}
 	}
+	-->
 	@media screen and (max-width:767px){
 		.sticky {
 	/*		bottom:0;*/
@@ -387,7 +388,7 @@ scroller2
 window.addEventListener("resize", scroller2.resize);
 -->
 
-function count(number1, number2, step, title, label, location_id, prefix='+', suffix='%'){
+<!--function count(number1, number2, step, title, label, location_id, prefix='+', suffix='%'){
 	target = document.querySelector('#'+location_id)
 	console.log(target)
 	let text=number1;
@@ -404,16 +405,19 @@ function count(number1, number2, step, title, label, location_id, prefix='+', su
 		}
 	}, 30);
 }
+-->
 
-function stick(location_id){
+<!--function stick(location_id){
 	target = document.querySelector('#'+location_id)
 	target.style.position="sticky"
 }
+	-->
 
-function unstick(location_id){
+<!--function unstick(location_id){
 	target = document.querySelector('#'+location_id)
 	target.style.position="relative"
 }
+	-->
 
 </script>
 
